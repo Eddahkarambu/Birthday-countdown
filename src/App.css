@@ -1,4 +1,75 @@
-.App {
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+body{
+  font-size: 100%;
+}
+.Timer-container{
+  background-image: url('./imagess/background.jpeg');
+  background-position: center;
+  background-size:cover;
+  background-repeat: no-repeat;
+  color: white;
+  width:100vw;
+  height:100vh;
+}
+.Timer{
+  /* background-color: ; */
+  display:flex;
+  flex:column;
+  align-items:center;
+  text-align: center;
+  justify-content:center ;
+  padding-bottom: 7em;
+  padding-top: 2em;
+  width:100%;
+  height:100%
+}
+
+.Timer div:first-child{
+  text-align:center;
+}
+
+h2{
+  font-weight: 600;
+  margin-bottom: 0.5em;
+}
+.Timer div:first-child p{
+  color:#f8f8f8;
+}
+ .Timer div:last-child{
+   border:1px solid #fff;
+   border-radius: 3px;
+   display: grid;
+   grid-template-columns:repeat(7,1fr);
+   margin-top: 3em;
+   padding:3em;
+   text-align: center;
+ }
+
+ section p:first-child, .Timer div:last-child span{
+   font-size: 3em;
+ }
+
+ @media screen and (max-width:480px){
+   .timer div:last-child{
+     margin-left: 2em;
+     margin-right: 2em;
+     padding:3em 1em
+   }
+ }
+
+
+
+
+
+
+
+
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +106,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
