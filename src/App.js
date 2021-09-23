@@ -23,6 +23,17 @@ function App() {
       const minutes= Math.floor((distance%(1000*60*60*24))/(1000*60));
       const seconds= Math.floor((distance%(1000*60*60*24))/1000);
 
+      if (distance<0){
+        // stop timer
+
+      }else{
+        // update timer
+        setTimerDays(days);
+        setTimerHours(hours);
+        setTimerMinutes(minutes);
+        setTimerSeconds(seconds);
+      }
+
     }, 1000);
 
   };
