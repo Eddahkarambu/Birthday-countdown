@@ -1,4 +1,4 @@
-import React,{useRef,useState} from 'react';
+import React,{ useEffect,useRef,useState} from 'react';
 import './App.css';
 
 function App() {
@@ -15,16 +15,17 @@ function App() {
 
     interval=setInterval(()=>{
       const now = new Date().getTime();
-      const distance=countdownDate -now;
+      const distance=countdownDate - now;
 
 
       const days= Math.floor(distance/(1000*60*60*24));
       const hours= Math.floor((distance%(1000*60*60*24)/(1000*60*60)));
-      const minutes= Math.floor((distance%(1000*60*60*24))/(1000*60));
-      const seconds= Math.floor((distance%(1000*60*60*24))/1000);
+      const minutes= Math.floor((distance%(1000*60*60))/(1000*60));
+      const seconds= Math.floor((distance%(1000*60))/1000);
 
-      if (distance<0){
+      if (distance < 0){
         // stop timer
+        clearInterval(interval.current);
 
       }else{
         // update timer
@@ -37,41 +38,51 @@ function App() {
     }, 1000);
 
   };
-
-
+      //  componentDidMount
+      useEffect(()=>{
+        startTimer();
+        return()=>{
+          clearInterval(interval.current);
+  
+        };
+  
+      });
 
   return (
     <div className="App">
       <div className="Timer-container">
       <div className="Timer">
-        <div>
-      <h1>My 23rd Birthday</h1>
+        
+        <div className="year">
+      <h1>Happy 23rd Birthday Eddah</h1>
       <p>Happy Birthday to me in afew :)</p>
       </div>
+      
+     
       
 
       <div>
         <section>
-          <p>17</p>
-          <p><small>Days</small></p>
+          <p>{timerDays}</p>
+          <p><small className="big">Days</small></p>
         </section>
         <span>:</span>
 
         <section>
-          <p>17</p>
-          <p><small>Hours</small></p>
+          <p>{timerHours}</p>
+          <p><small className="big">Hours</small></p>
         </section>
         <span>:</span>
 
         <section>
-          <p>17</p>
-          <p><small>Minutes</small></p>
+          <p>{timerMinutes}</p>
+          <p><small className="big">Minutes</small></p>
         </section>
         <span>:</span>
 
         <section>
-          <p>17</p>
-          <p><small>Seconds</small></p>
+          <p>{timerSeconds}</p>
+          <p><small className="big">Seconds</small></p>
         </section>
         
 
