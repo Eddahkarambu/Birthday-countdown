@@ -1,3 +1,13 @@
+# Author
+Eddah Karambu
+
+# Description
+ This app is  reminds me the most important date in my life which is my birthday
+
+# Website url
+https://birthday-eddah.herokuapp.com/
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

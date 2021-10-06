@@ -75,7 +75,8 @@ h1{
    .timer div:last-child{
      margin-left: 2em;
      margin-right: 2em;
-     padding:3em 1em
+     padding:3em 1em;
+     width:100%;
    }
  }
 
