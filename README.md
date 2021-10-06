@@ -2,7 +2,7 @@
 Eddah Karambu
 
 # Description
- This app is  reminds me the most important date in my life which is my birthday
+ This app  reminds me the most important date in my life which is my birthday
 
 # Website url
 https://birthday-eddah.herokuapp.com/
