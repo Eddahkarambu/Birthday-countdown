@@ -54,7 +54,7 @@ function App() {
       <div className="Timer">
         
         <div className="year">
-      <h1>Happy 23rd Birthday Eddah</h1>
+      <h1>Happy 24rd Birthday Eddah</h1>
       <p>Happy Birthday to me in afew :)</p>
       </div>
       
